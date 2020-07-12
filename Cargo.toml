@@ -1,6 +1,6 @@
 [package]
 name = "rs-gles2"
-version = "0.1.0"
+version = "0.1.1"
 license = "BSD-3-Clause"
 authors = ["Raja Lehtihet <raja.lehtihet@gmail.com>", "Wael El Oraiby <wael.eloraiby@gmail.com>"]
 edition = "2018"
@@ -14,7 +14,7 @@ readme = "README.md"
 withbindgen = ["bindgen"]
 
 [dependencies]
-rs-ctypes = "0.1.0"
+rs-ctypes = "0.1.1"
 
 [build-dependencies]
 cc = { version = "1.0.58", features = ["parallel"] }

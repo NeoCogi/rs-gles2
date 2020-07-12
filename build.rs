@@ -46,6 +46,7 @@ fn rebuild() {
         .parse_callbacks(Box::new(bindgen::CargoCallbacks))
         .clang_arg("-I c_code")
         .ctypes_prefix("rs_ctypes")
+        .use_core()
         .blacklist_item("strtold")
         .blacklist_item("qfcvt")
         .blacklist_item("qecvt")
