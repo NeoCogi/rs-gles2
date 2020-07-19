@@ -1,6 +1,6 @@
 [package]
 name = "rs-gles2"
-version = "0.1.1"
+version = "0.1.2"
 license = "BSD-3-Clause"
 authors = ["Raja Lehtihet <raja.lehtihet@gmail.com>", "Wael El Oraiby <wael.eloraiby@gmail.com>"]
 edition = "2018"
