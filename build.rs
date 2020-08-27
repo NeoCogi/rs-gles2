@@ -28,7 +28,6 @@
 
 use std::env;
 
-#[cfg(feature = "withbindgen")]
 fn rebuild() {
     use std::path::PathBuf;
 
@@ -44,7 +43,7 @@ fn rebuild() {
         // Tell cargo to invalidate the built crate whenever any of the
         // included header files changed.
         .parse_callbacks(Box::new(bindgen::CargoCallbacks))
-        .clang_arg("-I c_code")
+        .clang_arg("-Ic_code")
         .ctypes_prefix("rs_ctypes")
         .use_core()
         .blacklist_item("strtold")
@@ -63,10 +62,6 @@ fn rebuild() {
     bindings
         .write_to_file(out_path.join("bindings.rs"))
         .expect("Couldn't write bindings!");
-}
-
-#[cfg(not(feature = "withbindgen"))]
-fn rebuild() {
 }
 
 fn main() {
